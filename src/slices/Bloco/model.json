@@ -1,0 +1,189 @@
+{
+  "id": "bloco",
+  "type": "SharedSlice",
+  "name": "Bloco",
+  "description": "Bloco",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "codigo": {
+          "type": "Text",
+          "config": {
+            "label": "Código (não alterar)",
+            "placeholder": ""
+          }
+        },
+        "titulo": {
+          "type": "Text",
+          "config": {
+            "label": "Título",
+            "placeholder": ""
+          }
+        },
+        "icone": {
+          "type": "Image",
+          "config": {
+            "label": "Ícone",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "imagem": {
+          "type": "Image",
+          "config": {
+            "label": "Imagem",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {
+        "conteudo": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Conteúdo",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        }
+      }
+    },
+    {
+      "id": "blocoValor",
+      "name": "Valor",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "codigo": {
+          "type": "Text",
+          "config": {
+            "label": "Código (não alterar)",
+            "placeholder": ""
+          }
+        },
+        "titulo": {
+          "type": "Text",
+          "config": {
+            "label": "Título",
+            "placeholder": ""
+          }
+        },
+        "icone": {
+          "type": "Image",
+          "config": {
+            "label": "Ícone",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "imagem": {
+          "type": "Image",
+          "config": {
+            "label": "Imagem",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {
+        "tipo": {
+          "type": "Text",
+          "config": {
+            "label": "Tipo",
+            "placeholder": ""
+          }
+        },
+        "titulo": {
+          "type": "Text",
+          "config": {
+            "label": "Título",
+            "placeholder": ""
+          }
+        },
+        "com_retorno": {
+          "type": "Boolean",
+          "config": {
+            "label": "Com retorno",
+            "default_value": false,
+            "placeholder_true": "true",
+            "placeholder_false": "false"
+          }
+        },
+        "valor": {
+          "type": "Text",
+          "config": {
+            "label": "Valor",
+            "placeholder": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "blocoFormasDePagamento",
+      "name": "Formas de Pagamento",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "codigo": {
+          "type": "Text",
+          "config": {
+            "label": "Código (não alterar)",
+            "placeholder": ""
+          }
+        },
+        "titulo": {
+          "type": "Text",
+          "config": {
+            "label": "Título",
+            "placeholder": ""
+          }
+        },
+        "icone": {
+          "type": "Image",
+          "config": {
+            "label": "Ícone",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "imagem": {
+          "type": "Image",
+          "config": {
+            "label": "Imagem",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {
+        "tipo": {
+          "type": "Text",
+          "config": {
+            "label": "Tipo",
+            "placeholder": ""
+          }
+        },
+        "conteudo": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Conteúdo",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        }
+      }
+    }
+  ]
+}
