@@ -1,8 +1,14 @@
-import { HeroProps } from "@/slices/Hero";
 import { PrismicNextImage } from "@prismicio/next";
-import Navbar from "./Navbar";
+import { ImageField, KeyTextField } from "@prismicio/client";
 
-const HeroComponent = ({ slice }: HeroProps) => {
+interface HeroComponentProps {
+    foto: ImageField;
+    logo: ImageField;
+    nome: KeyTextField;
+    profissao: KeyTextField;
+}
+
+const HeroComponent = ({ foto, logo, nome, profissao }: HeroComponentProps) => {
     return (
         <>
             <div className="relative md:-mt-14">
@@ -12,19 +18,9 @@ const HeroComponent = ({ slice }: HeroProps) => {
                 </div>
                 <div className="container m-auto bg-background text-background rounded-r-[5rem] relative z-1 overflow-hidden">
                     <PrismicNextImage
-                        field={slice.primary.foto}
+                        field={foto}
                         alt=""
                     />
-                    {/* <div className="absolute bottom-5 right-14 grid text-center text-black blur-sm opacity-40">
-                        <div className="flex justify-center mb-3">
-                            <PrismicNextImage
-                                field={slice.primary.logo}
-                                alt=""
-                            />
-                        </div>
-                        <h3 className="text-2xl">{slice.primary.nome}</h3>
-                        <p className="tracking-widest">{slice.primary.profissao}</p>
-                    </div> */}
                     <div
                         className="absolute grid text-center
                                     [ -bottom-6 -right-3 scale-[55%] ]
@@ -34,13 +30,13 @@ const HeroComponent = ({ slice }: HeroProps) => {
                         <div className="flex justify-end md:justify-center mb-3">
                             <PrismicNextImage
                                 className="invert"
-                                field={slice.primary.logo}
+                                field={logo}
                                 alt=""
                             />
                         </div>
-                        <h3 className="text-2xl">{slice.primary.nome}</h3>
+                        <h3 className="text-2xl">{nome}</h3>
                         <p className="tracking-widest">
-                            {slice.primary.profissao}
+                            {profissao}
                         </p>
                     </div>
                 </div>

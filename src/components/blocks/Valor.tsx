@@ -1,6 +1,10 @@
 import { ImageField, KeyTextField } from "@prismicio/client";
 import { PrismicNextImage } from "@prismicio/next";
-import { BlocoSliceBlocoValorItem, BlocoSliceDefaultItem, Simplify } from "../../../prismicio-types";
+import {
+    BlocoSliceBlocoValorItem,
+    BlocoSliceDefaultItem,
+    Simplify,
+} from "../../../prismicio-types";
 
 interface ValorProps {
     icone: ImageField;
@@ -18,6 +22,7 @@ const Valor = ({ titulo, icone, items }: ValorProps) => {
                 >
                     {titulo}
                     <PrismicNextImage
+                        alt=""
                         className="invert"
                         width={40}
                         height={40}

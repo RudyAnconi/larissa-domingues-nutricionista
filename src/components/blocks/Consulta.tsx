@@ -16,6 +16,7 @@ const Consulta = ({ icone, titulo, items }: ConsultaProps) => {
                 <div className="flex justify-start gap-2 mb-10">
                     <PrismicNextImage
                         className="invert"
+                        alt=""
                         field={icone}
                     />
                     <h1
