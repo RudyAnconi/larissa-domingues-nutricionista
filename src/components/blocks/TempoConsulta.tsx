@@ -1,8 +1,21 @@
-import { BlocoProps } from "@/slices/Bloco";
+import { ImageField, KeyTextField } from "@prismicio/client";
 import { PrismicNextImage } from "@prismicio/next";
 import { PrismicRichText } from "@prismicio/react";
+import { BlocoSliceDefaultItem, Simplify } from "../../../prismicio-types";
 
-const TempoConsulta = ({ slice }: BlocoProps) => {
+interface TempoConsultaProps {
+    imagem: ImageField;
+    icone: ImageField;
+    titulo: KeyTextField;
+    items: Simplify<BlocoSliceDefaultItem>[];
+}
+
+const TempoConsulta = ({
+    imagem,
+    icone,
+    titulo,
+    items,
+}: TempoConsultaProps) => {
     return (
         <div className="">
             <div className="container m-auto bg-background text-foreground rounded-[5rem] rounded-tl-none pt-80 px-6 md:p-16 md:pt-0 md:pb-0 relative z-1">
@@ -10,7 +23,7 @@ const TempoConsulta = ({ slice }: BlocoProps) => {
                     alt=""
                     className="[ md:-ml-24 md:h-[550px] md:w-auto ] 
                     [ lg:-ml-12 lg:scale-100 ]"
-                    field={slice.primary.imagem}
+                    field={imagem}
                 />
                 <div
                     className="absolute left-8 right-8 top-6 
@@ -21,18 +34,18 @@ const TempoConsulta = ({ slice }: BlocoProps) => {
                             alt=""
                             width={40}
                             height={40}
-                            field={slice.primary.icone}
+                            field={icone}
                         />
                         <h1
                             className="text-4xl relative
                 after:content[''] after:absolute after:-bottom-3 after:left-0 after:h-2 after:bg-foreground after:w-24"
                         >
-                            {slice.primary.titulo}
+                            {titulo}
                         </h1>
                     </div>
                     <div className="flex justify-end">
                         <div className="grid items-end gap-3 justify-end my-16 md:w-[52%] lg:w-[50%]">
-                            {slice.items.map((item, k) => (
+                            {items.map((item, k) => (
                                 <div
                                     key={k}
                                     className="text-2xl md:text-2xl lg:text-4xl text-right pr-7 relative 

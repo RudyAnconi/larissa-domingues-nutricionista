@@ -30,33 +30,62 @@ const Bloco = ({ slice }: BlocoProps): JSX.Element => {
         >
             {slice.variation === "default" &&
                 slice.primary.codigo === "bem-vindo" && (
-                    <BemVindo slice={slice} />
+                    <BemVindo
+                        titulo={slice.primary.titulo}
+                        items={slice.items}
+                    />
                 )}
 
             {slice.variation === "default" &&
                 slice.primary.codigo === "objetivos" && (
-                    <Objetivos slice={slice} />
+                    <Objetivos
+                        imagem={slice.primary.imagem}
+                        icone={slice.primary.icone}
+                        titulo={slice.primary.titulo}
+                        items={slice.items}
+                    />
                 )}
 
             {slice.variation === "default" &&
                 slice.primary.codigo === "consulta" && (
-                    <Consulta slice={slice} />
+                    <Consulta
+                        icone={slice.primary.icone}
+                        titulo={slice.primary.titulo}
+                        items={slice.items}
+                    />
                 )}
 
             {slice.variation === "default" &&
                 slice.primary.codigo === "tempo-consulta" && (
-                    <TempoConsulta slice={slice} />
+                    <TempoConsulta
+                        imagem={slice.primary.imagem}
+                        icone={slice.primary.icone}
+                        titulo={slice.primary.titulo}
+                        items={slice.items}
+                    />
                 )}
 
-            {slice.variation === "blocoValor" && <Valor slice={slice} />}
+            {slice.variation === "blocoValor" && (
+                <Valor
+                    icone={slice.primary.icone}
+                    titulo={slice.primary.titulo}
+                    items={slice.items}
+                />
+            )}
 
             {slice.variation === "blocoFormasDePagamento" && (
-                <FormaPagamento slice={slice} />
+                <FormaPagamento
+                    titulo={slice.primary.titulo}
+                    items={slice.items}
+                />
             )}
 
             {slice.variation === "default" &&
                 slice.primary.codigo === "rodape" && (
-                    <Rodape slice={slice} />
+                    <Rodape
+                        titulo={slice.primary.titulo}
+                        items={slice.items}
+                    />
                 )}
         </section>
     );
