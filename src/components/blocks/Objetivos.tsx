@@ -4,15 +4,11 @@ import { PrismicRichText } from "@prismicio/react";
 
 const Objetivos = ({ slice }: BlocoProps) => {
     return (
-        <div className="relative">
-            <div className="flex inset-0 absolute z-0">
-                <div className="flex-1 bg-background"></div>
-                <div className="flex-1 bg-foreground"></div>
-            </div>
+        <div className="">
             <div className="container m-auto bg-background text-foreground rounded-[5rem] rounded-tl-none pt-80 px-6 md:p-16 md:pt-0 md:pb-0 relative z-1">
                 <PrismicNextImage
                     alt=""
-                    className="[ md:-ml-40 md:scale-75 md:-mb-24 ] 
+                    className="[ md:-ml-24 md:h-[550px] md:w-auto ] 
                     [ lg:-ml-12 lg:scale-100 ]"
                     field={slice.primary.imagem}
                 />

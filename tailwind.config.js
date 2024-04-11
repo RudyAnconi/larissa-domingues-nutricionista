@@ -6,14 +6,14 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'sans': ['Tenor Sans', 'sans-serif'],
+        'sans': ['Tenor Sans', 'Roboto','sans-serif'],
       },
       fontWeight: {
         'light': 400,
         'normal': 400,
         'medium': 400,
         'semibold': 400,
-        'bold': 700,
+        'bold': 400,
       },
       colors: {
         "foreground": "#cc9999",

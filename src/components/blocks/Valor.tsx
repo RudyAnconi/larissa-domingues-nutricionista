@@ -3,13 +3,10 @@ import { PrismicNextImage } from "@prismicio/next";
 
 const Valor = ({ slice }: BlocoProps) => {
     return (
-        <div className="relative">
-            <div className="flex inset-0 absolute z-0">
-                <div className="flex-1 bg-background"></div>
-                <div className="flex-1 bg-foreground"></div>
-            </div>
+        <div className="">
             <div className="container m-auto bg-foreground text-background rounded-[5rem] rounded-bl-none px-6 pt-16 pb-0 md:p-16 md:pb-0 relative z-1">
-                <h1 className="text-4xl font-bold flex gap-4 justify-center md:justify-start">
+                <h1 className="text-4xl font-bold flex gap-4 justify-center md:justify-start relative
+                [ after:content[''] after:absolute after:-bottom-4 after:left-0 after:h-2 after:bg-background after:w-24 ]">
                     {slice.primary.titulo}
                     <PrismicNextImage
                         className="invert"
@@ -18,11 +15,11 @@ const Valor = ({ slice }: BlocoProps) => {
                         field={slice.primary.icone}
                     />
                 </h1>
-                <div className="grid grid-rows-2 md:grid-cols-2 md:w-[90%] m-auto md:justify-center md:items-stretch my-16 gap-10 relative">
+                <div className="grid grid-rows-2 md:grid-cols-2 md:grid-rows-1 md:w-[90%] lg:w-[50%] m-auto md:justify-center md:items-stretch my-16 gap-10">
                     {slice.items.map((item, k) => (
                         <div
                             key={k}
-                            className="h-full"
+                            className="relative"
                         >
                             <div className="text-center text-3xl px-8 py-2 bg-foreground rounded-full -mb-7 relative z-10 w-fit mx-auto">
                                 {item.tipo}
@@ -43,6 +40,7 @@ const Valor = ({ slice }: BlocoProps) => {
                         </div>
                     ))}
                 </div>
+                <div>&nbsp;</div>
             </div>
         </div>
     );

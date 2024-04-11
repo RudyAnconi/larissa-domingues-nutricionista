@@ -1,6 +1,7 @@
 import { PrismicPreview } from "@prismicio/next";
 import { repositoryName } from "@/prismicio";
 import "./styles.css";
+import Navbar from "@/components/Navbar";
 
 export default function RootLayout({
     children,
@@ -20,11 +21,16 @@ export default function RootLayout({
                     crossOrigin="anonymous"
                 />
                 <link
-                    href="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap"
+                    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Tenor+Sans&display=swap"
                     rel="stylesheet"
                 />
             </head>
-            <body className="bg-background text-foreground tenor-sans-regular">
+            <body className="bg-background text-foreground tenor-sans-regular relative">
+                <div className="flex inset-0 absolute z-0">
+                    <div className="flex-1 bg-background"></div>
+                    <div className="flex-1 bg-foreground"></div>
+                </div>
+                <Navbar />
                 {children}
             </body>
             <PrismicPreview repositoryName={repositoryName} />

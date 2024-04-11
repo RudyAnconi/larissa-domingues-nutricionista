@@ -1,15 +1,16 @@
 import { HeroProps } from "@/slices/Hero";
 import { PrismicNextImage } from "@prismicio/next";
+import Navbar from "./Navbar";
 
 const HeroComponent = ({ slice }: HeroProps) => {
     return (
         <>
-            <div className="relative">
+            <div className="relative md:-mt-14">
                 <div className="flex inset-0 absolute z-0">
                     <div className="flex-1 bg-background"></div>
                     <div className="flex-1 bg-foreground"></div>
                 </div>
-                <div className="container m-auto bg-background text-background rounded-br-[5rem] relative z-1 overflow-hidden">
+                <div className="container m-auto bg-background text-background rounded-r-[5rem] relative z-1 overflow-hidden">
                     <PrismicNextImage
                         field={slice.primary.foto}
                         alt=""

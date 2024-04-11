@@ -2,6 +2,7 @@ import BemVindo from "@/components/blocks/BemVindo";
 import Consulta from "@/components/blocks/Consulta";
 import FormaPagamento from "@/components/blocks/FormaPagamento";
 import Objetivos from "@/components/blocks/Objetivos";
+import Rodape from "@/components/blocks/Rodape";
 import TempoConsulta from "@/components/blocks/TempoConsulta";
 import Valor from "@/components/blocks/Valor";
 import { cn } from "@/lib/utils";
@@ -52,6 +53,11 @@ const Bloco = ({ slice }: BlocoProps): JSX.Element => {
             {slice.variation === "blocoFormasDePagamento" && (
                 <FormaPagamento slice={slice} />
             )}
+
+            {slice.variation === "default" &&
+                slice.primary.codigo === "rodape" && (
+                    <Rodape slice={slice} />
+                )}
         </section>
     );
 };
