@@ -29,7 +29,7 @@ const Valor = ({ titulo, icone, items }: ValorProps) => {
                         field={icone}
                     />
                 </h1>
-                <div className="grid grid-rows-2 md:grid-cols-2 md:grid-rows-1 md:w-[90%] lg:w-[50%] m-auto md:justify-center md:items-stretch my-16 gap-10">
+                <div className="grid grid-rows-2 md:grid-cols-2 md:grid-rows-1 md:w-[90%] lg:w-[70%] xl:w-[50%] m-auto md:justify-center md:items-stretch my-16 gap-10">
                     {items.map((item, k) => (
                         <div
                             key={k}
