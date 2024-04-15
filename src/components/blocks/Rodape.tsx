@@ -10,7 +10,7 @@ interface RodapeProps {
 const Rodape = ({ titulo, items }: RodapeProps) => {
     return (
         <div className="">
-            <div className="container m-auto bg-foreground text-background rounded-[5rem] rounded-tl-none py-16 px-6 md:p-16 relative z-1">
+            <div className="container m-auto bg-foreground text-background rounded-[5rem] py-16 px-6 md:p-16 relative z-1">
                 {items.map((item, k) => (
                     <div
                         key={k}
