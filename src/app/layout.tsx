@@ -2,6 +2,7 @@ import { PrismicPreview } from "@prismicio/next";
 import { repositoryName } from "@/prismicio";
 import "./styles.css";
 import Navbar from "@/components/Navbar";
+import Whatsapp from "@/components/Whatsapp";
 
 export default function RootLayout({
     children,
@@ -31,6 +32,7 @@ export default function RootLayout({
                     <div className="flex-1 bg-foreground"></div>
                 </div>
                 <Navbar />
+                <Whatsapp />
                 {children}
             </body>
             <PrismicPreview repositoryName={repositoryName} />

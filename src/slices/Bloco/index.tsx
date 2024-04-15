@@ -65,20 +65,20 @@ const Bloco = ({ slice }: BlocoProps): JSX.Element => {
                     />
                 )}
 
-            {slice.variation === "blocoValor" && (
+            {/* {slice.variation === "blocoValor" && (
                 <Valor
                     icone={slice.primary.icone}
                     titulo={slice.primary.titulo}
                     items={slice.items}
                 />
-            )}
+            )} */}
 
-            {slice.variation === "blocoFormasDePagamento" && (
+            {/* {slice.variation === "blocoFormasDePagamento" && (
                 <FormaPagamento
                     titulo={slice.primary.titulo}
                     items={slice.items}
                 />
-            )}
+            )} */}
 
             {slice.variation === "default" &&
                 slice.primary.codigo === "rodape" && (

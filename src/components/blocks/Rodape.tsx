@@ -10,21 +10,21 @@ interface RodapeProps {
 const Rodape = ({ titulo, items }: RodapeProps) => {
     return (
         <div className="">
-            <div className="container m-auto bg-background text-foreground rounded-[5rem] rounded-tl-none py-16 px-6 md:p-16 relative z-1">
+            <div className="container m-auto bg-foreground text-background rounded-[5rem] rounded-tl-none py-16 px-6 md:p-16 relative z-1">
                 {items.map((item, k) => (
                     <div
                         key={k}
-                        className="text-2xl lg:text-4xl mb-16"
+                        className="text-2xl lg:text-4xl grid justify-center items-center mb-10"
                     >
-                        <PrismicRichText field={item.conteudo} />
+                        {!k && <PrismicRichText field={item.conteudo} />}
+                        {k == 1 && (<h2 className="text-4xl relative 
+                    [ after:content[''] after:absolute after:-bottom-3 after:left-0 after:h-2 after:bg-background after:w-24 ]">
+                            <PrismicRichText field={item.conteudo} />
+                        </h2>)}
+                        {k == 2 && <PrismicRichText field={item.conteudo} />}
+                        
                     </div>
                 ))}
-                <h1
-                    className="text-4xl relative 
-                    [ after:content[''] after:absolute after:-bottom-3 after:left-0 after:h-2 after:bg-background after:w-24 ]"
-                >
-                    {titulo}
-                </h1>
             </div>
         </div>
     );
